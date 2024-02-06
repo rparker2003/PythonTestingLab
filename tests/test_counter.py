@@ -76,3 +76,17 @@ class CounterTest(TestCase):
         # Check that reading a fake client returns a proper return code.
         result2 = self.client.get('/counters/read_fail')
         self.assertEqual(result2.status_code, status.HTTP_404_NOT_FOUND)
+
+    def test_delete_a_counter(self):
+        """It should read a counter"""
+        # Make a call to create a counter, and put the counter
+        self.client.post('/counters/read')
+        self.client.put('/counters/read')
+
+        # Make a call to get a counter, and ensure it returned a good code
+        result = self.client.delete('/counters/read')
+        self.assertEqual(result.status_code, status.HTTP_204_NO_CONTENT)
+
+        # Check that reading a fake client returns a proper return code.
+        result2 = self.client.get('/counters/read_fail')
+        self.assertEqual(result2.status_code, status.HTTP_404_NOT_FOUND)
