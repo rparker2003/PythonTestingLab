@@ -78,7 +78,7 @@ class CounterTest(TestCase):
         self.assertEqual(result2.status_code, status.HTTP_404_NOT_FOUND)
 
     def test_delete_a_counter(self):
-        """It should read a counter"""
+        """It should delete a counter"""
         # Make a call to create a counter, and put the counter
         self.client.post('/counters/read')
         self.client.put('/counters/read')
