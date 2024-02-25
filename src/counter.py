@@ -1,3 +1,5 @@
+"""Holds the counter functions like read, update, create, delete, etc."""
+
 from flask import Flask
 from src import status
 
@@ -14,8 +16,7 @@ COUNTERS = {}
 @app.route('/counters/<name>', methods=['POST'])
 def create_counter(name):
     """Create a counter"""
-    app.logger.info(f"Request to create counter: {name}")
-    global COUNTERS
+    app.logger.info("Request to delete counter: %s", name)
     if name in COUNTERS:
         return {"Message": f"Counter {name} already exists"}, status.HTTP_409_CONFLICT
     COUNTERS[name] = 0
@@ -25,8 +26,7 @@ def create_counter(name):
 @app.route('/counters/<name>', methods=['PUT'])
 def update_counter(name):
     """Update a counter"""
-    app.logger.info(f"Request to update counter: {name}")
-    global COUNTERS
+    app.logger.info("Request to delete counter: %s", name)
     if name in COUNTERS:
         COUNTERS[name] += 1
     else:
@@ -38,8 +38,7 @@ def update_counter(name):
 @app.route('/counters/<name>', methods=['GET'])
 def read_counter(name):
     """Read a counter"""
-    app.logger.info(f"Request to read counter: {name}")
-    global COUNTERS
+    app.logger.info("Request to delete counter: %s", name)
     if name not in COUNTERS:
         return {"Message": f"Counter {name} does not exist"}, status.HTTP_404_NOT_FOUND
 
@@ -49,8 +48,7 @@ def read_counter(name):
 @app.route('/counters/<name>', methods=['DELETE'])
 def delete_counter(name):
     """Delete a counter"""
-    app.logger.info(f"Request to delete counter: {name}")
-    global COUNTERS
+    app.logger.info("Request to delete counter: %s", name)
     if name not in COUNTERS:
         return {"Message": f"Counter {name} does not exist"}, status.HTTP_404_NOT_FOUND
 

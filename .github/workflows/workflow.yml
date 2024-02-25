@@ -40,4 +40,4 @@ jobs:
         run: |
           # Assuming you're using Pylint for static code analysis
           pip install pylint
-          pylint src
+          pylint src --fail-under=8.0
