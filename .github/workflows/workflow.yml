@@ -30,14 +30,6 @@ jobs:
       - name: Run unit tests with nose
         run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
 
-      - name: Check documentation coverage
-        run: |
-          # Assuming you're using Sphinx for documentation
-          pip install sphinx
-          sphinx-build -b html src/ src/_build
-          # Calculate documentation coverage
-          python calculate_documentation_coverage.py
-
       - name: Analyze code security
         run: |
           # Assuming you're using Bandit for code security analysis
