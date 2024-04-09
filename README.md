@@ -7,7 +7,7 @@ I have completed the Python Testing Lab from Prof. John Businge (johnxu21) in CS
 ## Completed Files
 
 In this repository, you will find my completed implementation in the following files:
-
+- `.github/workflows/workflow.yml`
 - `src/counter.py`
 - `tests/test_counter.py`
 
@@ -18,8 +18,8 @@ I have implemented a GitHub workflow named "CI workflow." This workflow is trigg
 1. **Checkout:** Checks out the current main branch files so the workflow can access them.
 2. **Install Dependencies:** Installs dependencies from `requirements.txt`, which exists in the repository.
 3. **Lint with Flake8:** Verifies that the style and syntax of files adhere to Flake8 guidelines.
-4. **Run Unit Tests with Nose:** Executes "nosetests" to validate the correctness of test files and their coverage.
+4. **Run Unit Tests with Nose:** Executes `nosetests` to validate the correctness of test files and their coverage.
 
-This workflow ensures that the codebase is consistent, well-styled, and the tests provide sufficient coverage.
+This workflow ensures that the codebase is consistent, and well-styled, and the tests provide sufficient coverage.
 
 Feel free to explore the code and reach out if you have any questions!
