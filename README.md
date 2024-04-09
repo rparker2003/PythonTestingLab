@@ -5,6 +5,10 @@ This repository is a fork of [johnxu21/tdd](https://github.com/johnxu21/tdd), se
 focusing on Test-Driven Development (TDD). This lab explores the principles of TDD, where test cases are authored before 
 the actual code, promoting robust software development practices.
 
+The repository was split into two labs which can be found on John Businge's website:
+- [Dynamic Analysis](https://johnxu21.github.io/teaching/CS472/Timetable/dynamic_analysis/?) - Task 5
+- [CI - Using GitHub Actions - Setting up workflow](https://johnxu21.github.io/teaching/CS472/Timetable/CI/?) - All Tasks
+
 
 ## Completed Files
 - **.github/workflows/workflow.yml:** This file contains the configuration for a GitHub workflow named "CI workflow." This workflow automates various tasks such as dependency installation, linting, and running unit tests upon code changes to ensure code consistency and correctness.
